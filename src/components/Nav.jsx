@@ -1,6 +1,7 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './style.css';
 
 const Nav = () => {
   return (
@@ -17,17 +18,19 @@ const Nav = () => {
             </Typography> 
            
                   <Button style={{color:'black'}}>
-                     <Link to='/' style={{color:"black" , fontFamily: 'monospace'}}>Home</Link>
-                     
+                     <Link to='/' style={{color:"black" , fontFamily: 'initial', fontSize:'25px'}}>Home</Link>
                   </Button>
                   <Button style={{color:'black'}}>
-                     <Link to='/l' style={{color:"black" , fontFamily: 'monospace'}}>Login</Link>
+                     <Link to='/l' style={{color:"black" , fontFamily: 'initial',fontSize:'25px'}}>Login</Link>
                   </Button>
                   <Button style={{color:'black'}}>
-                     <Link to='/s' style={{color:"black" , fontFamily: 'monospace'}}>Signup</Link>
+                     <Link to='/s' style={{color:"black" , fontFamily: 'initial',fontSize:'25px'}}>Signup</Link>
                   </Button>
                   <Button style={{color:'black'}}>
-                     <Link to='/d' style={{color:"black" , fontFamily: 'monospace'}}>Dashboard</Link>
+                     <Link to='/d' style={{color:"black" , fontFamily: 'initial',fontSize:'25px'}}>Dashboard</Link>
+                  </Button>
+                  <Button style={{color:'black'}}>
+                     <Link to='/m' style={{color:"black" , fontFamily: 'initial',fontSize:'25px'}}>Menu</Link>
                   </Button>
         </Toolbar>
      </AppBar>

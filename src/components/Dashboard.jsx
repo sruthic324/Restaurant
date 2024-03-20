@@ -1,35 +1,63 @@
-import { Button } from '@mui/material'
-import React from 'react'
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import { Link } from 'react-router-dom';
-// import Order from './components/Order';
-// import Menu from './components/Menu';
+  import * as React from 'react';
+  import Divider from '@mui/material/Divider';
+  import Paper from '@mui/material/Paper';
+  import MenuList from '@mui/material/MenuList';
+  import MenuItem from '@mui/material/MenuItem';
+  import ListItemText from '@mui/material/ListItemText';
+  import ListItemIcon from '@mui/material/ListItemIcon';
+  import Typography from '@mui/material/Typography';
+  import ContentCut from '@mui/icons-material/ContentCut';
+  import ContentCopy from '@mui/icons-material/ContentCopy';
+  import ContentPaste from '@mui/icons-material/ContentPaste';
+  import Cloud from '@mui/icons-material/Cloud';
 const Dashboard = () =>  {
-  
-  return (
-    <div>
- <br /><br /><br /><br /> <br /><br /><br /><br />
-
-    <Button style={{color:'black'}}>
-                     Dashboard
-                  </Button>
-    
- <Button variant="outlined" startIcon={<RestaurantMenuIcon />}>  
-  Order
-  {/* <Link to="/o">
-        <button>Go to Destination</button>
-      </Link> */}
-  <Link to='/o' style={{color:"black" , fontFamily: 'monospace'}}></Link> 
-</Button> 
-<Button variant="contained" endIcon={<MenuBookIcon />}>
-  Menu
-  <Link to='/m' style={{color:"black" , fontFamily: 'monospace'}}></Link>
-</Button>
-   
-  </div>
-  )
-}
-
+      return (
+      <Paper sx={{ width: 320, maxWidth: '100%' }}>
+        <br/><br/><br/> <br/><br/><br/> <br/><br/><br/>
+        <MenuList>
+         <MenuItem>
+         
+            <ListItemIcon>
+              <Cloud fontSize="small" />
+            </ListItemIcon>
+            <Typography>Dashboard</Typography>
+            {/* <ListItemText>Web Clipboard</ListItemText> */}
+          </MenuItem>
+          <Divider/>
+          <MenuItem>
+            <ListItemIcon>
+              <ContentCut fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Order</ListItemText>
+            {/* <Typography variant="body2" color="text.secondary">
+              ⌘X
+            </Typography> */}
+            
+          </MenuItem>
+          <MenuItem>
+            <ListItemIcon>
+              <ContentCopy fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Menu</ListItemText>
+            {/*<Typography variant="body2" color="text.secondary">
+              ⌘C
+            </Typography> */}
+          </MenuItem>
+          <MenuItem>
+            <ListItemIcon>
+              <ContentPaste fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Feedback</ListItemText>
+            {/*<Typography variant="body2" color="text.secondary">
+              ⌘V
+            </Typography>*/}
+          </MenuItem>
+          
+          
+        </MenuList>
+       
+      </Paper>
+      
+    );
+  }
 export default Dashboard

@@ -14,7 +14,6 @@ const Home = () =>{
       })
 
   },[])
-
 return (
   <div>
       <Grid container spacing={2}>
@@ -42,9 +41,7 @@ return (
               )
               })}
       </Grid>
-
   </div>
 )
 }
-
 export default Home
